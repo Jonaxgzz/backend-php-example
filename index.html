@@ -13,14 +13,14 @@
 </head>
 
 <body>
-  <video src="img/video.mp4" id="vidFondo"></video>
+  <!-- <video src="img/video.mp4" id="vidFondo"></video> -->
 
   <div class="contenedor">
     <div class="card rowTitulo">
       <h1>Buscador</h1>
     </div>
     <div class="colFiltros">
-      <form action="buscador.php" method="post" id="formulario">
+      <form action="javascript:filtrar()" id="formulario">
         <div class="filtrosContenido">
           <div class="tituloFiltros">
             <h5>Realiza una búsqueda personalizada</h5>
@@ -51,6 +51,9 @@
     <div class="colContenido">
       <div class="tituloContenido card">
         <h5>Resultados de la búsqueda:</h5>
+        <div class="ContenidoPrincipal">
+
+        </div>
         <div class="divider"></div>
         <button type="button" name="todos" class="btn-flat waves-effect" id="mostrarTodos">Mostrar Todos</button>
       </div>
