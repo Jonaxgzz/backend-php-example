@@ -116,13 +116,17 @@ $("#mostrarTodos").click(function(event) {
 
 
 //Funcion para buscar por Ciudades
+
 function filtrar() {
+  var precio = $("#rangoPrecio").val().split(";");
   $.ajax({
     url:'./server/buscador.php',
     type: 'POST',
     data: {
       ciudad: $('#selectCiudad').val(),
       tipo: $('#selectTipo').val(),
+      precioMin: precio[0],
+      precioMax: precio[1]
     },
     dataType: 'json',
     success: function (result){
